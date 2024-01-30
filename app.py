@@ -12,7 +12,7 @@ CORS(app)
 
 sender_email = "recruting.made.easy@gmail.com"
 receiver_email = "itanzteste@gmail.com"
-password = "RecrutingEasy1999"
+password = ""
 
 @app.route('/')
 def index():
