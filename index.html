@@ -245,26 +245,98 @@ AOS.init();
 </script>
 
 <script>
-    function submitForm() {
-        var formData = {
-            name: $("#name").val(),
-            email: $("#email").val(),
-            info: $("#info").val(),
-        };
+// Variable to track changes in the form
+var formChanged = false;
 
-        $.ajax({
-            type: "POST",
-            url: "https://rme.onrender.com/submitForm",  
-            data: JSON.stringify(formData),
-            contentType: "application/json",
-            success: function(response) {
-                console.log("Success:", response);
-            },
-            error: function(error) {
-                console.log("Error:", error);
-            }
-        });
+// Bind the submitForm function to the form submission event
+$('form').submit(submitForm);
+
+// Bind the checkFormChanges function to input/change events on form fields
+$('form input, form textarea').on('input change', function() {
+    formChanged = true;
+    enableOrDisableSubmitButton();
+});
+
+function submitForm(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // If the form hasn't changed, do not submit
+    if (!formChanged) {
+        console.log('Form has not changed. Not submitting.');
+        return;
     }
+
+    // Get form data
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var info = $("#info").val();
+
+    // Clear existing messages
+    $('.error-message').remove();
+    $('.success-message').remove();
+
+    // Disable the submit button to prevent multiple submissions
+    $('button[type="submit"]').prop('disabled', true);
+
+    // Validate fields
+    if (name.trim() === '' || email.trim() === '' || info.trim() === '') {
+        showError('name', 'Please enter your full name');
+        enableOrDisableSubmitButton();
+        return;
+    }
+
+    // Validate email using a simple regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showError('email', 'Please enter a valid email address');
+        enableOrDisableSubmitButton();
+        return;
+    }
+
+    // All fields are valid, proceed with form submission
+    var formData = {
+        name: name,
+        email: email,
+        info: info,
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:3000/submitForm",
+        data: JSON.stringify(formData),
+        contentType: "application/json",
+        success: function(response) {
+            console.log("Success:", response);
+            // Display success message
+            showSuccessMessage('Form submitted successfully!');
+            formChanged = false; // Reset formChanged after successful submission
+            enableOrDisableSubmitButton();
+        },
+        error: function(error) {
+            console.log("Error:", error);
+            // Display error message
+            showErrorMessage('Error submitting the form. Please try again.');
+            enableOrDisableSubmitButton();
+        }
+    });
+}
+
+function showError(field, message) {
+    // Create and append error message above the specified field
+    $('#' + field).before('<div class="error-message text-danger">' + message + '</div>');
+}
+
+function showSuccessMessage(message) {
+    // Create and append success message
+    $('form').append('<div class="success-message text-success">' + message + '</div>');
+}
+
+function enableOrDisableSubmitButton() {
+    // Enable or disable the submit button based on whether the form has changed
+    $('button[type="submit"]').prop('disabled', !formChanged);
+}
+
 </script>
 
 </body>
