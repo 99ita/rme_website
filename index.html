@@ -372,7 +372,7 @@ function submitForm(event) {
     $('button[type="submit"]').prop('disabled', true);
 
     // Validate fields
-    if (name.trim() === '' || email.trim() === '' || info.trim() === '') {
+    if (name.trim() === '') {
         showError('name', 'Please enter your full name');
         enableOrDisableSubmitButton();
         return;
@@ -380,11 +380,15 @@ function submitForm(event) {
 
     // Validate email using a simple regex
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(email) || email.trim() === '') {
         showError('email', 'Please enter a valid email address');
         enableOrDisableSubmitButton();
         return;
     }
+
+	if (info.trim() === ''){
+		showError('info', 'Please enter some information about yourself');
+	}
 
     // All fields are valid, proceed with form submission
     var formData = {
@@ -395,7 +399,7 @@ function submitForm(event) {
 
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:3000/submitForm",
+        url: "https://rme.onrender.com/submitForm",
         data: JSON.stringify(formData),
         contentType: "application/json",
         success: function(response) {
@@ -422,6 +426,11 @@ function showError(field, message) {
 function showSuccessMessage(message) {
     // Create and append success message
     $('form').append('<div class="success-message text-success">' + message + '</div>');
+}
+
+function showErrorMessage(message) {
+    // Create and append success message
+    $('form').append('<div class="error-message text-danger">' + message + '</div>');
 }
 
 function enableOrDisableSubmitButton() {
