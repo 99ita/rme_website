@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Classic:wght@400;700&display=swap');
+
 
 html, body{
   height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat Classic', sans-serif;
   color:#222;
 }
 .navbar{
@@ -104,6 +106,32 @@ html, body{
   color: #bb0000;
 }
 
+.package-card {
+  border: 2px solid #3498db; /* Border color */
+  border-radius: 15px; /* Border radius for rounded corners */
+  padding: 20px; /* Adjust padding as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  text-align: center;
+  background-color: #fff; /* Background color for the card */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color change on hover */
+}
+
+.package-card:hover {
+  border-color: #2c3e50; /* Change border color on hover */
+  background-color: #ecf0f1;
+}
+
+/* Add these styles to your existing CSS file */
+
+.testimonial-card {
+  border: 2px solid #ccc; /* Add a border around the testimonial */
+  border-radius: 15px; /* Set border-radius for rounded corners */
+  padding: 15px; /* Add padding for better spacing */
+  margin-bottom: 20px; /* Add margin to separate testimonials */
+}
+
+
+
 .fa-facebook:hover,
 .fa-twitter:hover,
 .fa-google-plus-g:hover,
@@ -178,9 +206,10 @@ hr.light-100 {
     font-size: 95%;
     padding: 8px 14px;
   }
-  .display-4 {
-    font-size: 200%;
-  } 
+
+  #slides .carousel-inner .carousel-item .carousel-caption h1.display-2 {
+    font-family: 'Montserrat Classic', sans-serif;
+  }
   .display-4 {
     font-size: 200%;
   }
