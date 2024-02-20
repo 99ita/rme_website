@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Classic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 
 
 html, body{
   height: 100%;
   width: 100%;
-  font-family: 'Montserrat Classic', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   color:#222;
   background-color: #F5F5F5;
 }
@@ -19,25 +21,39 @@ html, body{
   padding: 0rem;
 }
 .navbar-brand img{
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
 }
 .navbar-nav li{
   padding-right: 20px;
 }
 .nav-link {
   font-size: 1.3em; 
-  padding: 10px 15px; 
-  background-color: rgba(0, 0, 0, 0.6); 
-  color: #ffffff; 
-  border: 2px solid #000000;
-  border-radius: 40px; 
+  color: #000; 
+  border-radius: 10px; 
   transition: background-color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
   background-color: #2a7bb2;
+  color: #ffffff;
 }
+
+.package-title {
+  color: #3498db; 
+  font-size: 2.5em; 
+}
+
+.contact-section {
+  width: 50%;
+}
+
+.contact-form {
+  max-width: 70%;
+  margin: 0 auto; 
+}
+
+
 .carousel-inner img{
   width: 100%;
 }
@@ -67,22 +83,17 @@ html, body{
 .carousel-caption-inner {
   position: relative;
   border-radius: 10px;
+  text-shadow: 
+    -1px -1px 0 black,        
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  display: inline-block; 
 }
 
-.background-rectangle {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: rgba(23, 39, 63, 0.65);
-  border-radius: 50px;
-  z-index: -1; /* Ensure the rectangle is behind the content */
+.attribution .name {
+  font-weight: bold;
 }
-
 
 .btn-primary {
   background-color: #3498db;
