@@ -7,7 +7,14 @@ html, body{
   width: 100%;
   font-family: 'Montserrat Classic', sans-serif;
   color:#222;
+  background-color: #F5F5F5;
 }
+
+.navbar{
+  padding: 0rem;
+  background-color: #F5F5F5
+}
+  
 .navbar{
   padding: 0rem;
 }
@@ -18,8 +25,18 @@ html, body{
 .navbar-nav li{
   padding-right: 20px;
 }
-.nav-link{
-  font-size: 1.1em !important;
+.nav-link {
+  font-size: 1.3em; 
+  padding: 10px 15px; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: #ffffff; 
+  border: 2px solid #000000;
+  border-radius: 40px; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #2a7bb2;
 }
 .carousel-inner img{
   width: 100%;
@@ -29,6 +46,12 @@ html, body{
   top: 50%;
   transform: translateY(-50%);
 }
+
+.carousel-caption button,
+.carousel-caption a {
+  margin-top: 25%; /* Adjust the value as needed */
+}
+
 .carousel-caption h1 {
   font-size: 500%;
   text-transform: uppercase;
@@ -40,17 +63,40 @@ html, body{
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
 }
+
+.carousel-caption-inner {
+  position: relative;
+  border-radius: 10px;
+}
+
+.background-rectangle {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(23, 39, 63, 0.65);
+  border-radius: 50px;
+  z-index: -1; /* Ensure the rectangle is behind the content */
+}
+
+
 .btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #564d7c;
+  background-color: #3498db;
+  border: 0px solid #2a7bb2;
 }
 .btn-primary:hover {
-  background-color: #563d7c;
-  border: 1px solid #563d7c;
+  background-color: #2a7bb2;
+  border: 0px solid #2a7bb2;
 }
 .jumbotron {
   padding: 1rem;
   border-radius: 0;
+  background-color: #dbdbdb;
+  
 }
 .padding {
   padding-bottom: 2rem;
@@ -107,27 +153,33 @@ html, body{
 }
 
 .package-card {
-  border: 2px solid #3498db; /* Border color */
-  border-radius: 15px; /* Border radius for rounded corners */
-  padding: 20px; /* Adjust padding as needed */
-  margin-bottom: 20px; /* Adjust margin as needed */
+  border: 2px solid #2c3e50;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  background-color: #fff; /* Background color for the card */
-  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color change on hover */
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .package-card:hover {
-  border-color: #2c3e50; /* Change border color on hover */
+  border-color: #3498db; /* Change border color on hover */
   background-color: #ecf0f1;
 }
 
 /* Add these styles to your existing CSS file */
 
 .testimonial-card {
-  border: 2px solid #ccc; /* Add a border around the testimonial */
-  border-radius: 15px; /* Set border-radius for rounded corners */
-  padding: 15px; /* Add padding for better spacing */
-  margin-bottom: 20px; /* Add margin to separate testimonials */
+  border: 2px solid #2c3e50; 
+  border-radius: 15px; 
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease-in-out
+}
+
+.testimonial-card:hover {
+  border: 2px solid #3498db;
 }
 
 
