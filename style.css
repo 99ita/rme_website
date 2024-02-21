@@ -91,6 +91,26 @@ html, body{
   display: inline-block; 
 }
 
+ol.custom-list {
+  list-style-type: none;
+  counter-reset: custom-counter;
+}
+
+ol.custom-list li {
+  counter-increment: custom-counter;
+}
+
+ol.custom-list li::before {
+  content: "Step " counter(custom-counter) ": ";
+  font-weight: bold;
+}
+
+li.bold-listing {
+  font-weight: bold;
+}
+
+
+
 .attribution .name {
   font-weight: bold;
 }
