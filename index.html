@@ -125,13 +125,18 @@
 		<div class="carousel-item active">
 			<div class="carousel-caption1 d-flex h-100 align-items-center justify-content-center">
 				<div class="carousel-caption-inner">
-					<h2>Currently available</h2>
-					<h4>Tennis and Soccer</h4>	
+					<h1>Currently available</h1>
+					<h2>Tennis and Soccer</h2>	
 				</div>
 			</div>
 			<img src="img/background2.png" class="d-block w-100">
 		</div>
 		<div class="carousel-item">
+			<div class="carousel-caption1 d-flex h-100 align-items-center justify-content-center">
+				<div class="carousel-caption-inner">
+					<h1>More coming soon...</h1>	
+				</div>
+			</div>
 			<img src="img/background3.jpeg" class="d-block w-100">
 		</div>
 	</div>
@@ -207,7 +212,7 @@
           <h4>1 Division</h4>
           <p>Connect with coaches in one division of your choice.</p>
           <p>Price: $119</p>
-          <a href="#contact-section" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="#contact-section" class="btn btn-primary btn-lg btn-package" data-package="basic">Get Started</a>
         </div>
       </div>
       <div class="col-md-4">
@@ -217,7 +222,7 @@
           <h4>3 Divisions</h4>
           <p>Reach out to coaches in three divisions of your choice.</p>
           <p>Price: $149</p>
-          <a href="#contact-section" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="#contact-section" class="btn btn-primary btn-lg btn-package" data-package="standard">Get Started</a>
         </div>
       </div>
       <div class="col-md-4">
@@ -227,7 +232,7 @@
 		  <h4>All Divisions</h4>
           <p>Maximize your exposure by connecting with coaches in all divisions available.</p>
           <p>Price: $189</p>
-          <a href="#contact-section" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="#contact-section" class="btn btn-primary btn-lg btn-package" data-package="premium">Get Started</a>
         </div>
       </div>
     </div>
@@ -377,6 +382,10 @@
 			<div class="col-12">
 				<hr class="light-100">
 				<h5>&copy; PlayPortal 2024</h5>
+				<h6>All rights reserved</h6>
+				<p>
+                    <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
+                </p>
 			</div>
 		</div>
 	</div>
@@ -438,6 +447,34 @@ AOS.init();
 		});
 	});
 </script>
+
+<script>
+	function updateFormFields(package) {
+	  switch (package) {
+		case 'basic':
+		  $('#package').val('basic');
+		  break;
+		case 'standard':
+		  $('#package').val('standard');
+		  break;
+		case 'premium':
+		  $('#package').val('premium');
+		  break;
+		default:
+		  break;
+	  }
+	}
+  
+	$('.btn-package').on('click', function () {
+	  var selectedPackage = $(this).data('package');
+	  updateFormFields(selectedPackage);
+  
+	  $('html, body').animate({
+		scrollTop: $('#contact-section').offset().top - $('.navbar').outerHeight()
+	  }, 1000);
+	});
+</script>
+
 
 <script>
 var formChanged = false;
