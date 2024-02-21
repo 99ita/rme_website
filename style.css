@@ -252,8 +252,12 @@ hr.light-100 {
   height: 100px; 
 }
 
+.bold-listing{
+  margin-top: 50px;
+}
+
 .step-description {
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 
 .carousel-caption1 {
