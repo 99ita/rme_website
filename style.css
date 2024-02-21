@@ -266,10 +266,10 @@ hr.light-100 {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    padding-top: 60px;
   }
 
   .btn {
-    /* Add any additional styling for your buttons */
     margin: 5px; 
   }
 }
@@ -289,10 +289,10 @@ hr.light-100 {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    padding-top: 60px;
 }
 
   .btn {
-    /* Add any additional styling for your buttons */
     margin: 5px; 
   
   }
@@ -304,10 +304,10 @@ hr.light-100 {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    padding-top: 60px;
   }
 
   .btn {
-    /* Add any additional styling for your buttons */
     margin: 5px; 
   
   }
@@ -335,6 +335,7 @@ hr.light-100 {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    padding-top: 60px;
   }
 
   .btn {
