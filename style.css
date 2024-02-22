@@ -39,6 +39,10 @@ html, body{
   color: #ffffff;
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .package-title {
   color: #3498db; 
   font-size: 2.5em; 
@@ -82,6 +86,8 @@ html, body{
 
 .carousel-caption-inner {
   position: relative;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   display: inline-block; 
