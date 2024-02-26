@@ -106,10 +106,11 @@ ol.custom-list li::before {
   content: "Step " counter(custom-counter) ": ";
   font-weight: bold;
 }
-
-li.bold-listing {
-  font-weight: bold;
+.listing{
+  margin-top: 70px;
 }
+
+
 
 .main-image{
   background-color: #000000;
@@ -270,14 +271,6 @@ hr.light-100 {
 .icon.small-icon {
   width: 100px; 
   height: 100px; 
-}
-
-.bold-listing{
-  margin-top: 50px;
-}
-
-.step-description {
-  margin-bottom: 100px;
 }
 
 .carousel-caption1 {
