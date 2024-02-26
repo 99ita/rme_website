@@ -111,6 +111,24 @@ li.bold-listing {
   font-weight: bold;
 }
 
+.main-image{
+  background-color: #000000;
+}
+
+.img-control{
+  overflow: hidden;
+}
+
+.btn-margin{
+  margin-top: 0px !important; 
+  margin-bottom: 40px !important; 
+}
+
+.img-control img{
+  width: 100%;
+  max-height: 500px;
+  max-width: 500px;
+}
 
 
 .attribution .name {
