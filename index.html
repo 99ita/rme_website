@@ -10,7 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/d43e01cd8e.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link href="style.css" rel="stylesheet">
 </head>
@@ -27,6 +27,12 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="#about-section">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#sports-section">Sports</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#steps-section">Steps</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#packages-section">Packages</a>
@@ -47,11 +53,6 @@
 							<img src="img/background.png" class="img-fluid">
 			</div>
 			<div class="">
-
-					<button type="button" class="btn btn-outline-light btn-md btn-margin">VIEW
-				DEMO</button>
-
-
 					<a href="#contact-section" class="btn btn-primary btn-md btn-margin">Get Started</a>
 				</div>
 				
@@ -120,39 +121,101 @@
 </div>
 
 
-<!--- Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel" data-aos="fade-up"
+<hr>
+<div id="sports-section" class="container-fluid padding"data-aos="fade-up"
 		data-aos-offset="150"
 		data-aos-delay="50"
 		data-aos-duration="700">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1"></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<div class="carousel-caption1 d-flex h-100 align-items-center justify-content-center">
-				<div class="carousel-caption-inner">
-					<h1>Currently available</h1>
-					<h2>Tennis and Soccer</h2>	
-				</div>
-			</div>
-			<img src="img/background2.png" class="d-block w-100">
+	<div class="row welcome">
+		<div class="col-12 text-center">
+			<h1 class="display-4">Sport Selection</h1>
+    		<p>Discover a Range of Athletic Opportunities and Scholarships in Various Sports.</p>
 		</div>
-		<div class="carousel-item">
-			<div class="carousel-caption1 d-flex h-100 align-items-center justify-content-center">
-				<div class="carousel-caption-inner">
-					<h1>More coming soon...</h1>	
+		<hr>
+		<div class="row sports-table">
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-futbol" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Soccer</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
 				</div>
 			</div>
-			<img src="img/background3.jpg" class="d-block w-100">
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-baseball" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Tennis</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3, NAIA, JUCO</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-basketball" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Basketball</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-golf-ball-tee" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Golf</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-volleyball" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Volleyball</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-baseball-bat-ball" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Baseball</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-baseball-bat-ball" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Softball</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inner">
+					<i class="fa-solid fa-medal" aria-hidden="true"></i>
+					<div class="text">
+						<h5>Other</h5>
+						<p>If you don't see your sport, we can still help you</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 text-center">
+			<h5><a href="#contact-section" class="contact-link">Contact Us!</a></h5>
 		</div>
 	</div>
 </div>
 
+<hr>
 
 <!---Step-by-Step-->
-<div id="recruitment-process-section" class="container-fluid padding" data-aos="fade-up"
+<div id="steps-section" class="container-fluid padding" data-aos="fade-up"
      data-aos-offset="150"
      data-aos-delay="50"
      data-aos-duration="700">
@@ -231,11 +294,11 @@
   <div class="container">
     <div class="row">
 		<div class="col-md-4">
-		  <div class="testimonial-card">
-			<p>"Working with PlayPortal was a pleasure. They were extremely quick and helped me find the right school for me!"</p>
-			<div class="attribution">
-			  <span class="name">Oliver Walker, Tennis Player</span>
-			</div>
+		  	<div class="testimonial-card">
+				<p>"Working with PlayPortal was a pleasure. They were extremely quick and helped me find the right school for me!"</p>
+				<div class="attribution">
+				<span class="name">Oliver Walker, Tennis Player</span>
+				</div>
 			</div>
 		</div>
 		
@@ -245,17 +308,17 @@
 				<div class="attribution">
 				  <span class="name">Rodrigo Mendoza, Tennis Player</span>
 				</div>
-			  </div>
-		  </div>
+			</div>
+		</div>
 		  
-		  <div class="col-md-4">
+		<div class="col-md-4">
 			<div class="testimonial-card">
 				<p>"PlayPortal helped me a lot during my process of seeking a school to do my Master's Program. They helped me with every detail including the email and the locations where I want to do my Graduate Program. I definitely recommend it!"</p>
 				<div class="attribution">
-				  <span class="name">Jose Nunez, Tennis Player</span>
+					<span class="name">Jose Nunez, Tennis Player</span>
 				</div>
-			  </div>
-		  </div>
+			</div>
+		</div>
     </div>
   </div>
 </div>
@@ -271,7 +334,7 @@
   <div class="row text-center padding welcome">
     <div class="col-12">
       <h1 class="display-4">Our Packages</h1>
-      <p>Available Divisions: NCAA D1, NCAA D2, NCAA D3, NAIA, JUCO</p>
+      <p>NCAA D1, NCAA D2, NCAA D3, NAIA, JUCO</p>
     </div>
 	<hr>
   </div>
@@ -354,9 +417,14 @@
 					<div class="col-md-6">
 						<label for="sport">Select Sport</label>
 						<select class="form-control" id="sport">
-							<option value="tennis">Tennis</option>
 							<option value="soccer">Soccer</option>
-							<option value="other">Other</option>
+							<option value="tennis">Tennis</option>
+							<option value="basketball">Basketball</option>
+							<option value="golf">Golf</option>
+							<option value="volleyball">Volleyball</option>
+							<option value="baseball">Baseball</option>
+							<option value="softball">Softball</option>
+							<option value="other">Other (Please specify in "Relevant Information")</option>
 						</select>
 					</div>
 					<div class="col-md-6">
@@ -441,10 +509,38 @@
   });
 </script>
 
+<script>
+	$(document).ready(function(){
+	  $('#sport').change(function(){
+		if($(this).val() === 'tennis'){
+		  $('#package option[value="premium"]').show();
+		} else {
+		  $('#package option[value="premium"]').hide();
+		  $('#package').val('basic');
+		}
+	  });
+	});
+  </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init();
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $(".contact-link").on('click', function (event) {
+            event.preventDefault();
+            var target = $($(this).attr('href'));
+            if (target.length) {
+                var headerHeight = $('.navbar').outerHeight();
+                $('html, body').animate({
+                    scrollTop: target.offset().top - headerHeight
+                }, 1000);
+            }
+        });
+    });
 </script>
 
 <script>
