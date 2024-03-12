@@ -17,7 +17,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md sticky-top">
+<nav class="navbar navbar-expand-md">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#"><img src="img/logo6.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -52,7 +52,7 @@
 			<div class="text-center img-control">
 				<img src="img/background.png" class="img-fluid">
 			</div>
-			<div class="">
+			<div class="first-button">
 					<a href="#contact-section" class="btn btn-primary btn-md btn-margin">Get Started</a>
 				</div>
 			</div>
@@ -61,16 +61,13 @@
 </div>
 
 <!--- Jumbotron -->
-<div class="container-fluid learn-more-bg" data-aos="fade-up"
-		data-aos-offset="150"
-		data-aos-delay="50"
-		data-aos-duration="700">
+<div class="container-fluid learn-more-bg jumbotron-wrapper">
 	<div class="row jumbotron">
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
 			<p class="lead">Are you looking for a university in the United States and don't want to overpay to a sports agency? Click "Learn More" to know how you can get connected with every college coach in the United States.</p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-			<a href="#contact-section" type="button" class="btn btn-outline-secondary
+			<a href="#steps-section" type="button" class="btn btn-outline-secondary
 			btn-lg">Learn More</a>
 		</div>
 	</div>
@@ -133,19 +130,19 @@
 		<div class="row sports-table">
 			<div class="col">
 				<div class="inner">
-					<i class="fa-solid fa-futbol" aria-hidden="true"></i>
+					<i class="fa-solid fa-baseball" aria-hidden="true"></i>
 					<div class="text">
-						<h5>Soccer</h5>
-						<p>NCAA D1, NCAA D2, NCAA D3</p>
+						<h5>Tennis</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3, NAIA, JUCO</p>
 					</div>
 				</div>
 			</div>
 			<div class="col">
 				<div class="inner">
-					<i class="fa-solid fa-baseball" aria-hidden="true"></i>
+					<i class="fa-solid fa-futbol" aria-hidden="true"></i>
 					<div class="text">
-						<h5>Tennis</h5>
-						<p>NCAA D1, NCAA D2, NCAA D3, NAIA, JUCO</p>
+						<h5>Soccer</h5>
+						<p>NCAA D1, NCAA D2, NCAA D3</p>
 					</div>
 				</div>
 			</div>
@@ -415,8 +412,8 @@
 					<div class="col-md-6">
 						<label for="sport">Select Sport</label>
 						<select class="form-control" id="sport">
-							<option value="soccer">Soccer</option>
 							<option value="tennis">Tennis</option>
+							<option value="soccer">Soccer</option>
 							<option value="basketball">Basketball</option>
 							<option value="golf">Golf</option>
 							<option value="volleyball">Volleyball</option>
@@ -439,7 +436,16 @@
                     <label for="academicInfo">Relevant Information</label>
                     <textarea class="form-control" id="info" rows="4" placeholder="Provide some insights of your background"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+				<div class="custom-checkbox">
+					<input type="checkbox" id="myCheckbox">
+					<label for="myCheckbox"></label>
+					<span class="label-text">I agree to the <a href="/terms">Terms of Service</a> and the <a href="/privacy">Privacy Policy</a></span>
+				</div>
+                <div class="row">
+					<div class="col-12">
+						<button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+					</div>
+				</div>
             </form>
         </div>
     </div>
@@ -481,22 +487,18 @@
     var testimonials = $(".testimonial-card");
     var testimonialsToShow = 3;
 
-    // Initialize by showing the first batch of testimonials
     showTestimonials(currentIndex);
 
-    // Event handler for the next button
     $("#next-testimonial").on("click", function () {
       currentIndex = (currentIndex + testimonialsToShow) % testimonials.length;
       showTestimonials(currentIndex);
     });
 
-    // Event handler for the previous button
     $("#prev-testimonial").on("click", function () {
       currentIndex = (currentIndex - testimonialsToShow + testimonials.length) % testimonials.length;
       showTestimonials(currentIndex);
     });
 
-    // Function to show testimonials starting from the given index
     function showTestimonials(startIndex) {
       testimonials.hide();
       for (var i = 0; i < testimonialsToShow; i++) {
@@ -587,7 +589,7 @@ AOS.init();
 
 
 <script>
-var formChanged = false;
+var formChanged = true;
 
 $('form').submit(submitForm);
 
@@ -613,8 +615,6 @@ function submitForm(event) {
 
     $('.error-message').remove();
     $('.success-message').remove();
-
-    $('button[type="submit"]').prop('disabled', true);
 
     if (name.trim() === '') {
         showError('name', 'Please enter your full name');
@@ -668,7 +668,7 @@ function submitForm(event) {
 }
 
 function showError(field, message) {
-    $('#' + field).before('<div class="error-message text-danger">' + message + '</div>');
+    $('#' + field).after('<div class="error-message text-danger">' + message + '</div>');
 }
 
 function showSuccessMessage(message) {

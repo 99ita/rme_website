@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Classic:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 
@@ -12,22 +11,25 @@ html, body{
   background-color: #F5F5F5;
 }
 
-.navbar{
-  padding: 0rem;
-  background-color: #F5F5F5
+.first-button .btn{
+  font-size: 22px;
 }
-  
+
 .navbar{
   padding: 0rem;
+  background-color: #F5F5F5;
 }
 .navbar-brand img{
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 }
 .navbar-nav li{
-  padding-right: 20px;
+  padding-left: 20px;
 }
 .nav-link {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
   font-size: 1.3em; 
   color: #000; 
   border-radius: 10px; 
@@ -110,19 +112,45 @@ ol.custom-list li::before {
   margin-top: 70px;
 }
 
-
+.navbar{
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 .main-image{
   background-color: #000000;
+  max-width: 1400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0 auto;
+  padding: 0 auto;
 }
+
+
+.jumbotron {
+  max-width: 1400px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #dbdbdb;
+}
+
+
+
+
+
+
+
+
 
 .img-control{
   overflow: hidden;
 }
 
 .btn-margin{
-  margin-top: 0px !important; 
-  margin-bottom: 40px !important; 
+  margin-top: 40px !important; 
+  margin-bottom: 70px !important; 
 }
 
 .img-control img{
@@ -143,12 +171,6 @@ ol.custom-list li::before {
 .btn-primary:hover {
   background-color: #2a7bb2;
   border: 0px solid #2a7bb2;
-}
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0;
-  background-color: #dbdbdb;
-  
 }
 .padding {
   padding-bottom: 2rem;
@@ -463,6 +485,46 @@ hr.light-100 {
   font-size: 22px;
 }
 
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .label-text{
+  padding-bottom: 10px
+}
+
+.custom-checkbox label {
+  position: relative;
+  cursor: pointer;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  background-color: #fff;
+  border: 2px solid #555;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.custom-checkbox input:checked + label:after {
+  content: "X"; /* Display an "X" when checked */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size:25px; /* Adjust font size */
+  color: #3498db; /* Color of the "X" */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
