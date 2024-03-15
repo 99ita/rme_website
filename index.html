@@ -821,6 +821,8 @@ function submitForm(event) {
 		package: package
     };
 
+	fbq('track','Contact',{Sport: sport, Package: package})
+
     $.ajax({
         type: "POST",
         url: "https://rme.onrender.com/submitForm",
