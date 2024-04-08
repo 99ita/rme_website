@@ -153,19 +153,6 @@ ol.custom-list li::before {
   margin-top: .3rem;
   margin-bottom: 1rem;
 }
-.fa-code {
-  color: #e54d26;
-}
-.fa-bold {
-  color: #563d7c;
-}
-.fa-css3 {
-  color: #2a63af;
-}
-.fa-code, .fa-bold, .fa-css3 {
-  font-size: 4em;
-  margin: 1rem;
-}
 .fun{
   width: 100%;
   margin-bottom: 2rem;
@@ -180,15 +167,14 @@ ol.custom-list li::before {
 .fa-facebook {
   color: #3b5998;
 }
-.fa-twitter {
-  color: #00aced;
+.fa-tiktok {
+  color: #000000;
 }
 .fa-google-plus-g {
   color: #dd4b39;
 }
 .fa-instagram {
-  color: #517fa8;
-}
+	color:  #515ECF}
 .fa-youtube {
   color: #bb0000;
 }
@@ -241,18 +227,19 @@ ol.custom-list li::before {
 
 
 .fa-facebook,
-.fa-twitter,
-.fa-tiktok:hover,
+.fa-instagram,
+.fa-tiktok,
 .fa-youtube {
   transition: color 0.4s;
 }
 
 .fa-facebook:hover,
-.fa-twitter:hover,
+.fa-instagram:hover,
 .fa-tiktok:hover,
 .fa-youtube:hover {
-  color: #d5d5d5;
+  color: #999999;
 }
+
 footer {
   background-color: #3f3f3f;
   color: #d5d5d5;
